@@ -1,0 +1,17 @@
+Description: Fix fs.unlink call
+Author: Xavier Guimard <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/919075
+Forwarded: not-needed
+Last-Update: 2019-01-14
+
+--- a/test/cli-test.js
++++ b/test/cli-test.js
+@@ -83,7 +83,7 @@
+         assert.equal(stderr, '');
+         assert.equal(stdout, '');
+         assert.equal(fs.readFileSync(outputFile), expectedOutput);
+-        fs.unlink('test/_files/cli_output.txt');
++        fs.unlink('test/_files/cli_output.txt', function() {});
+         done();
+       });
+     });

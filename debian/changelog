@@ -1,0 +1,104 @@
+mustache.js (2.3.2-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ lintian-brush ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set fields Upstream-Name, Upstream-Contact in debian/copyright.
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Add "Rules-Requires-Root: no"
+  * Modernize debian/watch
+  * Replace deprecated node-uglify by uglifyjs (Closes: #979951)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 13 Jan 2021 12:55:53 +0100
+
+mustache.js (2.3.2-1) unstable; urgency=medium
+
+  [ Jelmer Vernooĳ ]
+  * Change priority extra to priority optional.
+  * Use secure copyright file specification URI.
+
+  [ Xavier Guimard ]
+  * Add debian/gbp.conf
+  * Declare compliance with policy 4.3.0
+  * Change MIT license to Expat
+  * Bump debhelper compatibility level to 11
+  * Add patch to fix bad fs.unlink() call (Closes: #919075)
+  * Hide lintian warning "please use libjs-mustache"
+  * Change section to javascript
+  * Honor not-check in DEB_BUILD_OPTIONS
+  * Add upstream/metadata
+  * Import upstream version 2.3.2
+  * Update node path in patch
+  * Add minimal autopkgtest files
+  * Add myself to uploaders
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 14 Jan 2019 15:12:41 +0100
+
+mustache.js (2.3.0-2) unstable; urgency=medium
+
+  * Rename executable to mustache.js. Closes: #846562.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 12 Dec 2016 11:25:25 +0100
+
+mustache.js (2.3.0-1) unstable; urgency=medium
+
+  * Add myself to Uploaders.
+  * Fix broken watchfile.
+  * New upstream release.
+  * Remove old patches.
+  * Update compat and Standards-Version with no changes.
+  * Update copyright info.
+  * Packaging refresh:
+    - Include CLI tool (patch nodejs path).
+    - Re-enable tests.
+    - Use a build directory, and re-generate the minified JS.
+  * Update Homepage and Vcs-* (pointing to pkg-javascript now).
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 13 Nov 2016 23:45:01 +0100
+
+mustache.js (0.4.2-2) unstable; urgency=low
+
+  * 01-replace_unicode_char.patch: fixes FTBFS when LANG=C is set
+    (which seems to be the case on buildds) (Closes: #676117)
+
+ -- David Paleino <dapal@debian.org>  Wed, 05 Sep 2012 10:21:29 +0200
+
+mustache.js (0.4.2-1) unstable; urgency=low
+
+  * New upstream version
+  * Updated debian/copyright
+  * Don't (try to) install CHANGES.md anymore, since it was dropped
+    upstream
+  * Clean generated files during dh_clean
+  * Standards-Version bump to 3.9.3, no changes needed
+
+ -- David Paleino <dapal@debian.org>  Thu, 01 Mar 2012 09:15:41 +0100
+
+mustache.js (0.4.0-1) unstable; urgency=low
+
+  * New upstream version
+  * Drop deleted THANKS from installed documentation
+  * Also build the requirejs and qooxdoo versions
+
+ -- David Paleino <dapal@debian.org>  Wed, 22 Feb 2012 18:33:24 +0100
+
+mustache.js (0.3.0-2) unstable; urgency=low
+
+  * Forgot to install the "clean" flavor of the lib
+
+ -- David Paleino <dapal@debian.org>  Wed, 02 Nov 2011 12:34:08 +0100
+
+mustache.js (0.3.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- David Paleino <dapal@debian.org>  Wed, 02 Nov 2011 12:04:20 +0100

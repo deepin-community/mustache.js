@@ -1,0 +1,3 @@
+# False positive
+embedded-javascript-library usr/lib/nodejs/mustache/mustache.js please use libjs-mustache
+embedded-javascript-library usr/lib/nodejs/mustache/mustache.min.js please use libjs-mustache

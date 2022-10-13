@@ -1,0 +1,14 @@
+Description: Fix nodejs path
+Author: Martín Ferrari <tincho@debian.org>
+Forwarded: no
+Reviewed-By: Xavier Guimard <yadd@debian.org>
+Last-Update: 2019-01-14
+
+--- a/bin/mustache
++++ b/bin/mustache
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env node
++#!/usr/bin/node
+ 
+ var fs = require('fs'),
+     path = require('path');

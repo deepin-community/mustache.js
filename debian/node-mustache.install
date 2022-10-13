@@ -1,0 +1,4 @@
+package.json            usr/lib/nodejs/mustache/
+mustache.js	        usr/lib/nodejs/mustache/
+build/mustache.min.js	usr/lib/nodejs/mustache/
+bin/                    usr/lib/nodejs/mustache/

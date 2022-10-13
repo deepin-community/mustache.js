@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export BUILDDIR := $(CURDIR)/build
+
+%:
+	dh $@ --builddirectory=$(BUILDDIR)
+
+override_dh_auto_build:
+	rake jquery
+	rake mootools
+	rake qooxdoo
+	rake dojo
+	rake yui3
+	rake minify
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	rake test
+endif

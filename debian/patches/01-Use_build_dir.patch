@@ -1,0 +1,46 @@
+Description: Fix some paths
+Author: Martín Ferrari <tincho@debian.org>
+Forwarded: no
+Reviewed-By: Xavier Guimard <yadd@debian.org>
+Last-Update: 2019-01-14
+
+--- a/Rakefile
++++ b/Rakefile
+@@ -3,18 +3,22 @@
+ 
+ task :default => :test
+ 
++def build_dir
++  ENV['BUILDDIR'] || '.'
++end
++
+ def minified_file
+   ENV['FILE'] || 'mustache.min.js'
+ end
+ 
+ desc "Run all tests"
+ task :test do
+-  sh "./node_modules/.bin/mocha test"
++  sh "mocha test"
+ end
+ 
+ desc "Make a compressed build in #{minified_file}"
+ task :minify do
+-  sh "./node_modules/.bin/uglifyjs mustache.js > #{minified_file}"
++  sh "uglifyjs mustache.js > #{build_dir}/#{minified_file}"
+ end
+ 
+ desc "Run JSHint"
+@@ -35,10 +39,10 @@
+   task short.to_sym => dependencies do
+     puts "Packaging for #{name}"
+ 
+-    mkdir_p final_location unless final_location.nil?
++    mkdir_p "#{build_dir}/#{final_location || '.'}"
+ 
+     sources = [ "#{source}/mustache.js.pre", 'mustache.js', "#{source}/mustache.js.post" ]
+-    relative_name = "#{final_location || '.'}/#{target_js}"
++    relative_name = "#{build_dir}/#{final_location || '.'}/#{target_js}"
+ 
+     open(relative_name, 'w') do |f|
+       sources.each {|source| f << File.read(source) }

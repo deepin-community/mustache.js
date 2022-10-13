@@ -1,0 +1,4 @@
+version=4
+
+https://github.com/janl/mustache.js/tags \
+         (?:.*/)?v?(\d[\d\.]*(?:rc\d*)?)\.tar\.gz

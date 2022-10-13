@@ -1,0 +1,7 @@
+mustache.js                 usr/share/javascript/mustache/
+build/mustache.min.js       usr/share/javascript/mustache/
+build/jquery.mustache.js    usr/share/javascript/mustache/
+build/mootools.mustache.js  usr/share/javascript/mustache/
+build/qooxdoo.mustache.js   usr/share/javascript/mustache/
+build/yui3/mustache/        usr/share/javascript/yui3/
+build/dojox/string/         usr/share/javascript/dojox/
