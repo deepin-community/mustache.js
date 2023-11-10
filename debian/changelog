@@ -1,3 +1,28 @@
+mustache.js (3.0.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + node-mustache: Add Multi-Arch: foreign.
+
+  [ Yadd ]
+  * Add Multi-Arch: foreign (Closes: #923515)
+  * New upstream version 3.0.1
+  * Update standards version to 4.6.1, no changes needed.
+  * Update nodejs dependency to nodejs:any
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 04 Dec 2022 22:16:33 +0000
+
+mustache.js (2.3.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Move to /usr/share/nodejs
+  * Update standards version to 4.6.1, no changes needed.
+  * Update nodejs dependency to nodejs:any
+
+ -- Yadd <yadd@debian.org>  Mon, 05 Sep 2022 03:04:02 +0200
+
 mustache.js (2.3.2-2) unstable; urgency=medium
 
   * Team upload
@@ -47,7 +72,7 @@ mustache.js (2.3.0-2) unstable; urgency=medium
 
   * Rename executable to mustache.js. Closes: #846562.
 
- -- Martín Ferrari <tincho@debian.org>  Mon, 12 Dec 2016 11:25:25 +0100
+ -- Martina Ferrari <tina@debian.org>  Mon, 12 Dec 2016 11:25:25 +0100
 
 mustache.js (2.3.0-1) unstable; urgency=medium
 
@@ -63,7 +88,7 @@ mustache.js (2.3.0-1) unstable; urgency=medium
     - Use a build directory, and re-generate the minified JS.
   * Update Homepage and Vcs-* (pointing to pkg-javascript now).
 
- -- Martín Ferrari <tincho@debian.org>  Sun, 13 Nov 2016 23:45:01 +0100
+ -- Martina Ferrari <tina@debian.org>  Sun, 13 Nov 2016 23:45:01 +0100
 
 mustache.js (0.4.2-2) unstable; urgency=low
 
